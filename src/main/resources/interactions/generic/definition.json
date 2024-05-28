@@ -1,8 +1,0 @@
-{
-  "folders": [],
-  "files": {
-  },
-  "java": {
-    "interactions/generic/generic.java.mustache" : "src/main/{{language}}/{{packagePath}}/interactions/{{nameInteCapitalize}}.java"
-  }
-}

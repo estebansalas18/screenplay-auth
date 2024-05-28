@@ -1,8 +1,0 @@
-{
-  "folders": [],
-  "files": {
-  },
-  "java": {
-    "interactions/options/options.java.mustache" : "src/main/{{language}}/{{packagePath}}/interactions/Options.java"
-  }
-}

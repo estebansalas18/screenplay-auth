@@ -1,8 +1,0 @@
-{
-  "folders": [],
-  "files": {
-  },
-  "java": {
-    "interactions/post/post.java.mustache" : "src/main/{{language}}/{{packagePath}}/interactions/Post.java"
-  }
-}

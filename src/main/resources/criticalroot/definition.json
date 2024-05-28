@@ -1,9 +1,0 @@
-{
-  "folders": [
-  ],
-  "java" : {
-  },
-  "files" : {
-    "criticalroot/criticalRoot.json.mustache": "{{rootName}}.json"
-  }
-}
