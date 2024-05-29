@@ -7,6 +7,7 @@ import co.com.auth.models.RegisterModel2;
 import co.com.auth.tasks.OpenBrowser;
 import co.com.auth.tasks.register.FillRegister1;
 import co.com.auth.tasks.register.FillRegister2;
+import co.com.auth.tasks.register.VerifyRegister;
 import co.com.auth.ui.RegisterForm;
 
 import co.com.auth.utils.Constants;
@@ -23,7 +24,7 @@ import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import static net.serenitybdd.screenplay.actors.OnStage.setTheStage;
 
-public class S1Register {
+public class S10Register {
     @Managed(driver = Constants.BROWSER, uniqueSession = true)
     WebDriver driver;
 
@@ -43,8 +44,8 @@ public class S1Register {
             "San Francisco",
             "123 Main St, Apt 4B",
             "esteban.salas@example.com",
-            "Password1!",
-            "Password1!");
+            "pass",
+            "password");
 
     @Before
     public void setUp() {
@@ -54,23 +55,31 @@ public class S1Register {
         user.can(BrowseTheWeb.with(driver));
     }
 
-    @Given("que el usuario accede a la pagina de registro")
-    public void queElUsuarioAccedeALaPaginaDeRegistro() {
+    @Given("que el usuario accede a la pagina de registro 10")
+    public void queElUsuarioAccedeALaPaginaDeRegistro10() {
         this.user.attemptsTo(OpenBrowser.at(Constants.URL + "/signup"));
     }
 
-    @When("ingresa todos los datos requeridos en el formulario de registro")
-    public void ingresaTodosLosDatosRequeridosEnElFormularioDeRegistro() throws InterruptedException {
+    @When("ingresa todos los datos requeridos en el formulario correctamente excepto contrasenias que coincidan 10")
+    public void ingresaTodosLosDatosRequeridosEnElFormularioCorrectamenteExceptoContraseniasQueCoincidan10()
+            throws InterruptedException {
         this.user.attemptsTo(FillRegister1.with(registerModel1));
         this.user.attemptsTo(Click.on(RegisterForm.CONTINUE_BUTTON));
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         this.user.attemptsTo(FillRegister2.with(registerModel2));
-        Thread.sleep(2000);
+        Thread.sleep(1000);
     }
 
-    @Then("si la informacion es valida, el sistema debe permitir al usuario registrarse")
-    public void siLaInformacionEsValidaElSistemaDebePermitirAlUsuarioRegistrarse() throws InterruptedException {
+    @Then("el sistema no debe permitir al usuario registrarse 10")
+    public void elSistemaNoDebePermitirAlUsuarioRegistrarse10() throws InterruptedException {
         this.user.attemptsTo(Click.on(RegisterForm.REGISTER_BUTTON));
-        Thread.sleep(2000);
+        Thread.sleep(1000);
+    }
+
+    @Then("el sistema debe mostrar un mensaje que indique que las contrasenias no coinciden 10")
+    public void elSistemaDebeMostrarUnMensajeQueIndiqueQueLasContraseniasNoCoinciden10() throws InterruptedException {
+        this.user.attemptsTo(VerifyRegister.withMessage(
+                "La contraseña no coincide"));
+        Thread.sleep(1000);
     }
 }

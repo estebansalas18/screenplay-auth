@@ -7,6 +7,7 @@ import co.com.auth.models.RegisterModel2;
 import co.com.auth.tasks.OpenBrowser;
 import co.com.auth.tasks.register.FillRegister1;
 import co.com.auth.tasks.register.FillRegister2;
+import co.com.auth.tasks.register.VerifyRegister;
 import co.com.auth.ui.RegisterForm;
 
 import co.com.auth.utils.Constants;
@@ -23,7 +24,7 @@ import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import static net.serenitybdd.screenplay.actors.OnStage.setTheStage;
 
-public class S1Register {
+public class S5Register {
     @Managed(driver = Constants.BROWSER, uniqueSession = true)
     WebDriver driver;
 
@@ -31,7 +32,7 @@ public class S1Register {
 
     private final RegisterModel1 registerModel1 = new RegisterModel1(
             "Esteban",
-            "Salas",
+            "s4l*s",
             "Pasaporte",
             "1111111111",
             "3007483232",
@@ -54,23 +55,31 @@ public class S1Register {
         user.can(BrowseTheWeb.with(driver));
     }
 
-    @Given("que el usuario accede a la pagina de registro")
-    public void queElUsuarioAccedeALaPaginaDeRegistro() {
+    @Given("que el usuario accede a la pagina de registro 5")
+    public void queElUsuarioAccedeALaPaginaDeRegistro5() {
         this.user.attemptsTo(OpenBrowser.at(Constants.URL + "/signup"));
     }
 
-    @When("ingresa todos los datos requeridos en el formulario de registro")
-    public void ingresaTodosLosDatosRequeridosEnElFormularioDeRegistro() throws InterruptedException {
+    @When("ingresa todos los datos requeridos en el formulario con un apellido con caracteres especiales 5")
+    public void ingresaTodosLosDatosRequeridosEnElFormularioConUnApellidoConCaracteresEspeciales5()
+            throws InterruptedException {
         this.user.attemptsTo(FillRegister1.with(registerModel1));
         this.user.attemptsTo(Click.on(RegisterForm.CONTINUE_BUTTON));
-        Thread.sleep(2000);
+        Thread.sleep(1000);
         this.user.attemptsTo(FillRegister2.with(registerModel2));
+        Thread.sleep(1000);
+    }
+
+    @Then("el sistema no debe permitir al usuario registrarse 5")
+    public void elSistemaNoDebePermitirAlUsuarioRegistrarse5() throws InterruptedException {
+        this.user.attemptsTo(Click.on(RegisterForm.REGISTER_BUTTON));
         Thread.sleep(2000);
     }
 
-    @Then("si la informacion es valida, el sistema debe permitir al usuario registrarse")
-    public void siLaInformacionEsValidaElSistemaDebePermitirAlUsuarioRegistrarse() throws InterruptedException {
-        this.user.attemptsTo(Click.on(RegisterForm.REGISTER_BUTTON));
-        Thread.sleep(2000);
+    @Then("el sistema debe mostrar un mensaje de error que indique ingresar el apellido sin caracteres especiales 5")
+    public void elSistemaDebeMostrarUnMensajeDeErrorQueIndiqueIngresarElApellidoSinCaracteresEspeciales5()
+            throws InterruptedException {
+        this.user.attemptsTo(VerifyRegister.withMessage("El apellido no debe contener caracteres especiales"));
+        Thread.sleep(1000);
     }
 }
