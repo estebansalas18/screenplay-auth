@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Inicio de sesion con correo y contrasena" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-05-29T00:18:36" hostname="SALAS" time="18.834">
+  <properties/>
+  <testcase name="Verificar que el usuario pueda iniciar sesion con su correo y contrasena" classname="Inicio de sesion con correo y contrasena" time="11.949"/>
+  <testcase name="Verificar que el usuario no pueda iniciar sesion con informacion invalida" classname="Inicio de sesion con correo y contrasena" time="6.885"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[may 28, 2024 7:18:38 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 125
+may 28, 2024 7:18:38 P. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 125.0.2535.67. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.16.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+</testsuite>

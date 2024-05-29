@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class Registro de usuario en la plataforma</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class Registro de usuario en la plataforma</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/default-package.html">default-package</a> &gt; Registro de usuario en la plataforma</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">10</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">5</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">1m12.00s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox failures" id="successRate">
+<div class="percent">50%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Tests</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="Verificar que el usuario ingreso el apellido con caracteres especiales"></a>
+<h3 class="failures">Verificar que el usuario ingreso el apellido con caracteres especiales</h3>
+<span class="code">
+<pre>java.lang.AssertionError: no such alert
+  (Session info: MicrosoftEdge=125.0.2535.67)
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [b56e8dcb14b5b0c7c6360ae791dd5afb, getAlertText {}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 125.0.2535.67, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:55997}, msedge: {msedgedriverVersion: 125.0.2535.67 (626a82df5fa7..., userDataDir: C:\Users\USUARIO\AppData\Lo...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55997/devtoo..., se:cdpVersion: 125.0.2535.67, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b56e8dcb14b5b0c7c6360ae791dd5afb
+	at net.serenitybdd.screenplay.ErrorTally.throwSummaryExceptionFrom(ErrorTally.java:38)
+	at net.serenitybdd.screenplay.ErrorTally.reportAnyErrors(ErrorTally.java:32)
+	at net.serenitybdd.screenplay.Actor.should(Actor.java:397)
+	at co.com.auth.tasks.register.VerifyRegister.performAs(VerifyRegister.java:25)
+	at net.serenitybdd.screenplay.Actor.performTask(Actor.java:299)
+	at net.serenitybdd.screenplay.Actor.perform(Actor.java:274)
+	at net.serenitybdd.screenplay.Actor.performWithoutReporting(Actor.java:258)
+	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:213)
+	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:222)
+	at co.com.auth.stepdefinitions.register.S5Register.elSistemaDebeMostrarUnMensajeDeErrorQueIndiqueIngresarElApellidoSinCaracteresEspeciales5(S5Register.java:82)
+	at ✽.el sistema debe mostrar un mensaje de error que indique ingresar el apellido sin caracteres especiales 5(file:///C:/Users/USUARIO/Documents/Repos/screenplay/src/test/resources/features/register.feature:44)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="Verificar que el usuario ingreso el nombre con caracteres especiales"></a>
+<h3 class="failures">Verificar que el usuario ingreso el nombre con caracteres especiales</h3>
+<span class="code">
+<pre>java.lang.AssertionError: no such alert
+  (Session info: MicrosoftEdge=125.0.2535.67)
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [b56e8dcb14b5b0c7c6360ae791dd5afb, getAlertText {}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 125.0.2535.67, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:55997}, msedge: {msedgedriverVersion: 125.0.2535.67 (626a82df5fa7..., userDataDir: C:\Users\USUARIO\AppData\Lo...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55997/devtoo..., se:cdpVersion: 125.0.2535.67, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b56e8dcb14b5b0c7c6360ae791dd5afb
+	at net.serenitybdd.screenplay.ErrorTally.throwSummaryExceptionFrom(ErrorTally.java:38)
+	at net.serenitybdd.screenplay.ErrorTally.reportAnyErrors(ErrorTally.java:32)
+	at net.serenitybdd.screenplay.Actor.should(Actor.java:397)
+	at co.com.auth.tasks.register.VerifyRegister.performAs(VerifyRegister.java:25)
+	at net.serenitybdd.screenplay.Actor.performTask(Actor.java:299)
+	at net.serenitybdd.screenplay.Actor.perform(Actor.java:274)
+	at net.serenitybdd.screenplay.Actor.performWithoutReporting(Actor.java:258)
+	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:213)
+	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:222)
+	at co.com.auth.stepdefinitions.register.S4Register.elSistemaDebeMostrarUnMensajeDeErrorQueIndiqueIngresarElNombreSinCaracteresEspeciales4(S4Register.java:82)
+	at ✽.el sistema debe mostrar un mensaje de error que indique ingresar el nombre sin caracteres especiales 4(file:///C:/Users/USUARIO/Documents/Repos/screenplay/src/test/resources/features/register.feature:38)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="Verificar que el usuario ingreso una fecha de nacimiento menor a 18 anios"></a>
+<h3 class="failures">Verificar que el usuario ingreso una fecha de nacimiento menor a 18 anios</h3>
+<span class="code">
+<pre>java.lang.AssertionError: no such alert
+  (Session info: MicrosoftEdge=125.0.2535.67)
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [b56e8dcb14b5b0c7c6360ae791dd5afb, getAlertText {}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 125.0.2535.67, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:55997}, msedge: {msedgedriverVersion: 125.0.2535.67 (626a82df5fa7..., userDataDir: C:\Users\USUARIO\AppData\Lo...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55997/devtoo..., se:cdpVersion: 125.0.2535.67, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b56e8dcb14b5b0c7c6360ae791dd5afb
+	at net.serenitybdd.screenplay.ErrorTally.throwSummaryExceptionFrom(ErrorTally.java:38)
+	at net.serenitybdd.screenplay.ErrorTally.reportAnyErrors(ErrorTally.java:32)
+	at net.serenitybdd.screenplay.Actor.should(Actor.java:397)
+	at co.com.auth.tasks.register.VerifyRegister.performAs(VerifyRegister.java:25)
+	at net.serenitybdd.screenplay.Actor.performTask(Actor.java:299)
+	at net.serenitybdd.screenplay.Actor.perform(Actor.java:274)
+	at net.serenitybdd.screenplay.Actor.performWithoutReporting(Actor.java:258)
+	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:213)
+	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:222)
+	at co.com.auth.stepdefinitions.register.S7Register.elSistemaDebeMostrarUnMensajeDeErrorQueIndiqueNoValidarElRegistroConUnaFechaNacimientoMenorA18Anios7(S7Register.java:82)
+	at ✽.el sistema debe mostrar un mensaje de error que indique no validar el registro con una fecha nacimiento menor a 18 anios 7(file:///C:/Users/USUARIO/Documents/Repos/screenplay/src/test/resources/features/register.feature:56)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="Verificar que el usuario ingreso una fecha de nacimiento valida"></a>
+<h3 class="failures">Verificar que el usuario ingreso una fecha de nacimiento valida</h3>
+<span class="code">
+<pre>java.lang.AssertionError: no such alert
+  (Session info: MicrosoftEdge=125.0.2535.67)
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [b56e8dcb14b5b0c7c6360ae791dd5afb, getAlertText {}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 125.0.2535.67, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:55997}, msedge: {msedgedriverVersion: 125.0.2535.67 (626a82df5fa7..., userDataDir: C:\Users\USUARIO\AppData\Lo...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55997/devtoo..., se:cdpVersion: 125.0.2535.67, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b56e8dcb14b5b0c7c6360ae791dd5afb
+	at net.serenitybdd.screenplay.ErrorTally.throwSummaryExceptionFrom(ErrorTally.java:38)
+	at net.serenitybdd.screenplay.ErrorTally.reportAnyErrors(ErrorTally.java:32)
+	at net.serenitybdd.screenplay.Actor.should(Actor.java:397)
+	at co.com.auth.tasks.register.VerifyRegister.performAs(VerifyRegister.java:25)
+	at net.serenitybdd.screenplay.Actor.performTask(Actor.java:299)
+	at net.serenitybdd.screenplay.Actor.perform(Actor.java:274)
+	at net.serenitybdd.screenplay.Actor.performWithoutReporting(Actor.java:258)
+	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:213)
+	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:222)
+	at co.com.auth.stepdefinitions.register.S8Register.elSistemaDebeMostrarUnMensajeDeErrorQueIndiqueNoValidarElRegistroConUnaFechaNacimientoPosteriorALaFechaActual8(S8Register.java:82)
+	at ✽.el sistema debe mostrar un mensaje de error que indique no validar el registro con una fecha nacimiento posterior a la fecha actual 8(file:///C:/Users/USUARIO/Documents/Repos/screenplay/src/test/resources/features/register.feature:62)
+</pre>
+</span>
+</div>
+<div class="test">
+<a name="Verificar que el usuario ingreso una identificacion mayor a 10 caracteres"></a>
+<h3 class="failures">Verificar que el usuario ingreso una identificacion mayor a 10 caracteres</h3>
+<span class="code">
+<pre>java.lang.AssertionError: no such alert
+  (Session info: MicrosoftEdge=125.0.2535.67)
+Build info: version: '4.16.1', revision: '9b4c83354e'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [b56e8dcb14b5b0c7c6360ae791dd5afb, getAlertText {}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 125.0.2535.67, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:55997}, msedge: {msedgedriverVersion: 125.0.2535.67 (626a82df5fa7..., userDataDir: C:\Users\USUARIO\AppData\Lo...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55997/devtoo..., se:cdpVersion: 125.0.2535.67, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b56e8dcb14b5b0c7c6360ae791dd5afb
+	at net.serenitybdd.screenplay.ErrorTally.throwSummaryExceptionFrom(ErrorTally.java:38)
+	at net.serenitybdd.screenplay.ErrorTally.reportAnyErrors(ErrorTally.java:32)
+	at net.serenitybdd.screenplay.Actor.should(Actor.java:397)
+	at co.com.auth.tasks.register.VerifyRegister.performAs(VerifyRegister.java:25)
+	at net.serenitybdd.screenplay.Actor.performTask(Actor.java:299)
+	at net.serenitybdd.screenplay.Actor.perform(Actor.java:274)
+	at net.serenitybdd.screenplay.Actor.performWithoutReporting(Actor.java:258)
+	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:213)
+	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:222)
+	at co.com.auth.stepdefinitions.register.S2Register.elSistemaDebeMostrarUnMensajeDeErrorQueIndiqueNoValidarElRegistroConUnNumeroDeIdentificacionMayorA10Caracteres(S2Register.java:82)
+	at ✽.el sistema debe mostrar un mensaje de error que indique no validar el registro con un numero de identificacion mayor a 10 caracteres 2(file:///C:/Users/USUARIO/Documents/Repos/screenplay/src/test/resources/features/register.feature:26)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">Verificar que el usuario ingreso contrasenias que no coinciden</td>
+<td class="success">6.451s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="failures">Verificar que el usuario ingreso el apellido con caracteres especiales</td>
+<td class="failures">6.752s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="success">Verificar que el usuario ingreso el email sin dominio</td>
+<td class="success">7.412s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="failures">Verificar que el usuario ingreso el nombre con caracteres especiales</td>
+<td class="failures">6.823s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="success">Verificar que el usuario ingreso una contrasenia invalida</td>
+<td class="success">7.810s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="failures">Verificar que el usuario ingreso una fecha de nacimiento menor a 18 anios</td>
+<td class="failures">6.717s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">Verificar que el usuario ingreso una fecha de nacimiento valida</td>
+<td class="failures">6.764s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="failures">Verificar que el usuario ingreso una identificacion mayor a 10 caracteres</td>
+<td class="failures">7.057s</td>
+<td class="failures">failed</td>
+</tr>
+<tr>
+<td class="success">Verificar que el usuario no pueda registrarse con algun campo vacio</td>
+<td class="success">7.558s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">Verificar que el usuario pueda registrarse</td>
+<td class="success">8.653s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.2</a> at 28/05/2024, 7:20:08 p. m.</p>
+</div>
+</div>
+</body>
+</html>
